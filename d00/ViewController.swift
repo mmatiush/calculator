@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
     
     var userIsInTheMiddleOfTyping = false
-    
+   
     @IBAction func touchDigit(_ sender: UIButton) {
 
         let digit = sender.currentTitle!
@@ -27,9 +27,9 @@ class ViewController: UIViewController {
     }
     
     // A computed property that helps to reducte code size by converting text from display to double and vice versa
-    var displayValue: Double {
+    var displayValue: Int {
         get {
-            return Double(display.text!)!
+            return Int(display.text!)!
         }
         set {
             display.text = String(newValue)
